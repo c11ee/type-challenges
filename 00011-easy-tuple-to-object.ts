@@ -32,6 +32,6 @@ type error = TupleToObject<[[1, 2], {}]>
  *       `P` 是索引类型查询的结果, 它取得是元组中的每个元素类型. 
  *       然后 `[P in T[number]]: P` 创建一个对象, 该对象的键和值与元组中的元素 一一 对应.
  */
-type TupleToObject<T extends readonly any[]> = {
+type TupleToObject<T extends readonly (string | number | symbol)[]> = {
   [P in T[number]]: P;
 }
