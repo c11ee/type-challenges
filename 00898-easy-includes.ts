@@ -81,4 +81,4 @@ type Includes<T extends readonly any[], U> = T extends [infer P, ...infer Rest]
  */
 type A = <T>() => T extends 3 ? 1 : 2;
 type B = <T>() => T extends 5 ? 1 : 2;
-type C = A extends B ? true : false;
+type C = A extends B ? true : false; 
